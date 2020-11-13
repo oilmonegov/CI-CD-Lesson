@@ -2,8 +2,6 @@ name: PR WorkFlow
 
 on:
   pull_request:
-    branches-ignore:
-      - ''
     branches:
       - master
       - staging
