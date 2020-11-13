@@ -3,7 +3,7 @@ name: PUSH Workflow
 on:
   push:
     branches-ignore:
-      - '**'
+      - ''
     branches:
       - master
       - staging
