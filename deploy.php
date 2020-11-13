@@ -36,18 +36,18 @@ task('deploy:secrets', function () {
 });
 
 // Production Server
-host('myapp.io') // Name of the server
-->hostname('104.248.172.220') // Hostname or IP address
+host('olili.dev') // Name of the server
+->hostname('157.230.52.148') // Hostname or IP address
 ->stage('production') // Deployment stage (production, staging, etc)
 ->user('root') // SSH user
-->set('deploy_path', '/var/www/my-app'); // Deploy path
+->set('deploy_path', '/home/forge/olili.dev'); // Deploy path
 
 // Staging Server
-host('staging.myapp.io') // Name of the server
-->hostname('104.248.172.220') // Hostname or IP address
-->stage('staging') // Deployment stage (production, staging, etc)
-->user('root') // SSH user
-->set('deploy_path', '/var/www/my-app-staging'); // Deploy path
+// host('staging.myapp.io') // Name of the server
+// ->hostname('104.248.172.220') // Hostname or IP address
+// ->stage('staging') // Deployment stage (production, staging, etc)
+// ->user('root') // SSH user
+// ->set('deploy_path', '/var/www/my-app-staging'); // Deploy path
 
 after('deploy:failed', 'deploy:unlock'); // Unlock after failed deploy
 
